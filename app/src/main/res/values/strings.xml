@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Android Part 4 Task 1.2</string>
+    <string name="add_text">Add</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_info_name_text">name</string>
+    <string name="fragment_info_email_text">email</string>
+    <string name="fragment_info_adress_text">adress</string>
+</resources>
