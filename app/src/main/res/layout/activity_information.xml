@@ -10,39 +10,4 @@
     tools:context="com.sourceit.task1.ui.Information"
     android:orientation="vertical"
     android:id="@+id/activity_info">
-
-    <!--<ImageView-->
-    <!--tools:src="@drawable/ic_contact_phone_black_48dp"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:id="@+id/information_icon"-->
-    <!--android:layout_alignParentTop="true"-->
-    <!--android:layout_centerHorizontal="true"-->
-    <!--android:paddingTop="100dp"-->
-    <!--android:layout_gravity="center_horizontal" />-->
-
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--tools:text="name"-->
-    <!--android:id="@+id/information_name"-->
-    <!--android:layout_gravity="center_horizontal"-->
-    <!--android:paddingTop="15dp" />-->
-
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--tools:text="email"-->
-    <!--android:id="@+id/information_email"-->
-    <!--android:layout_gravity="center_horizontal"-->
-    <!--android:paddingTop="10dp" />-->
-
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--tools:text="adress"-->
-    <!--android:id="@+id/information_adress"-->
-    <!--android:layout_gravity="center_horizontal"-->
-    <!--android:paddingTop="10dp" />-->
-
 </LinearLayout>
