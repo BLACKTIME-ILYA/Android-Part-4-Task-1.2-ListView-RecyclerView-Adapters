@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android Part 4 Task 1.2</string>
+    <string name="app_name">Android Part 4 Task 1.2 RecyclerView</string>
     <string name="add_text">Add</string>
 
     <!-- TODO: Remove or change this placeholder text -->

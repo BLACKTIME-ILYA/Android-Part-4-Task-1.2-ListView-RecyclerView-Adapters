@@ -6,13 +6,12 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
 
 import com.sourceit.task1.R;
 import com.sourceit.task1.model.Contact;
@@ -27,8 +26,7 @@ public class MainFragment extends Fragment {
     private final int ADD_ONE = 1;
     private int position_use;
 
-    private ArrayAdapter<Contact> adapter;
-    private ListView contact_list;
+    private RecyclerView contact_list;
     private Button add;
 
     public static MainFragment newInstance(int position) {
@@ -56,22 +54,21 @@ public class MainFragment extends Fragment {
             addContacts(DEFAULT);
         }
 
-        adapter = new MyAdapter(getContext(), Contacts.contacts);
-        contact_list.setAdapter(adapter);
-
-        contact_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        contact_list.setLayoutManager(layoutManager);
+        contact_list.setAdapter(new RecyclerViewAdapter(Contacts.contacts, new OnItemClickWatcher<Contact>() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(View v, int position, Contact item) {
                 position_use = position;
                 openInformation(position_use);
             }
-        });
+        }));
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 addContacts(ADD_ONE);
-                adapter.notifyDataSetChanged();
+                contact_list.getAdapter().notifyDataSetChanged();
             }
         });
 
@@ -82,7 +79,7 @@ public class MainFragment extends Fragment {
     }
 
     private void init() {
-        contact_list = (ListView) view.findViewById(R.id.contact_list);
+        contact_list = (RecyclerView) view.findViewById(R.id.contact_list);
         add = (Button) view.findViewById(R.id.button_add);
     }
 

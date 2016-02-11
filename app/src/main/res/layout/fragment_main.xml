@@ -5,7 +5,7 @@
     tools:context="com.sourceit.task1.ui.MainFragment"
     android:orientation="vertical">
 
-    <ListView
+    <android.support.v7.widget.RecyclerView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/contact_list"

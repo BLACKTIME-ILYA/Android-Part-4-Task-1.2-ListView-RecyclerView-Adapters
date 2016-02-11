@@ -9,6 +9,5 @@ import java.util.ArrayList;
  */
 public class Contacts {
     public static ArrayList<Contact> contacts;
-
     public static int numberOfContact;
 }
